@@ -1,0 +1,16 @@
+//====================================================================================================
+
+.footer {
+    @include adaptiveValue("padding-top", 57, 20);
+    @include adaptiveValue("padding-bottom", 57, 20);
+    &__container {
+    }
+
+    &__title {
+        font-family: 'Open Sans';
+        font-size: rem(15);
+        line-height: math.div(20, 15);
+    }
+}
+
+//====================================================================================================

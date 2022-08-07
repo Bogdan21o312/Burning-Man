@@ -1,0 +1,93 @@
+//====================================================================================================
+
+.main-block {
+    @include adaptiveValue("padding-top", 321, 162);
+    @include adaptiveValue("padding-bottom", 339, 20);
+    @include adaptiveValue("margin-bottom", 57, 20);
+    background: url('@img/header-bg.jpg') no-repeat center top / cover;
+    &__container {
+    }
+
+    &__body {
+    }
+
+    &__title {
+        color: $whiteColor;
+        &_sub {
+            color: $whiteColor;
+        }
+    }
+
+    &__button {
+    
+    }
+}
+.button {
+}
+
+//====================================================================================================
+
+.about {
+    @include adaptiveValue("padding-top", 57, 20);
+    @include adaptiveValue("padding-bottom", 57, 20);
+    &__container {
+
+    }
+
+    &__body {
+    }
+
+    &__title {
+        &:not(:last-child) {
+            @include adaptiveValue("padding-bottom", 58, 20);
+        }
+    }
+
+    &__items {
+    }
+}
+
+.items-about {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(36);
+    @media (max-width: em(1200)) {
+        flex-direction: column;
+    }
+    &__item {
+    }
+
+    &__title {
+        &:not(:last-child) {
+            @include adaptiveValue("padding-bottom", 19, 10);
+        }
+    }
+
+    &__text {
+        &:not(:last-child) {
+            @include adaptiveValue("padding-bottom", 113, 20);
+        }
+    }
+
+    &__images {
+        display: flex;
+        gap: rem(29);
+        @media (max-width: $mobileSmall) {
+            flex-direction: column;
+            text-align: center;
+            width: 100%;
+        }
+    }
+
+    &__image {
+        img {
+			max-width: 100%;
+            @media (any-hover: hover) {
+                &:hover {
+                    box-shadow: 0 rem(20) rem(40) rgba(0,0,0,0.3);
+                    transform: scale(1.1);
+                }			
+            }
+		}
+    }
+}
